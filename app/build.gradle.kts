@@ -67,4 +67,7 @@ dependencies {
     androidTestImplementation(libs.ui.test.junit4)
     debugImplementation(libs.ui.tooling)
     debugImplementation(libs.ui.test.manifest)
+    implementation("com.google.accompanist:accompanist-systemuicontroller:0.28.0")
+    implementation("androidx.compose.ui:ui-text-google-fonts:1.2.0-beta02")
+
 }
