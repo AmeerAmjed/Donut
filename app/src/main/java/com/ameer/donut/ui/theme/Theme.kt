@@ -5,8 +5,13 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.CompositionLocalProvider
+import androidx.compose.runtime.ReadOnlyComposable
+import androidx.compose.runtime.compositionLocalOf
 import androidx.compose.ui.graphics.Color
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
+
+private val localSpacing = compositionLocalOf { Spacing() }
 
 private val DarkColorScheme = darkColorScheme(
     primary = Purple80,
@@ -15,20 +20,25 @@ private val DarkColorScheme = darkColorScheme(
 )
 
 private val LightColorScheme = lightColorScheme(
-    primary = Purple40,
-    secondary = PurpleGrey40,
+    primary = lightPrimary,
+    secondary = Color.White,
     tertiary = Pink40,
 
 
     background = lightSecondary,
     surface = Color(0xFFFFFBFE),
     onPrimary = Color.White,
-    onSecondary = Color.White,
+    onSecondary = Color(0xFF1C1B1F),
     onTertiary = Color.White,
     onBackground = Color(0xFF1C1B1F),
     onSurface = Color(0xFF1C1B1F),
 
-)
+    )
+
+val MaterialTheme.spacing: Spacing
+    @Composable
+    @ReadOnlyComposable
+    get() = localSpacing.current
 
 @Composable
 fun DonutTheme(
@@ -50,10 +60,15 @@ fun DonutTheme(
         darkIcons = !darkTheme
     )
 
-    MaterialTheme(
-        colorScheme = colorsTheme,
-        typography = Typography,
-        shapes = Shapes,
-        content = content
-    )
+    CompositionLocalProvider(localSpacing provides Spacing()) {
+        MaterialTheme(
+            colorScheme = colorsTheme,
+            typography = Typography,
+            shapes = Shapes,
+            content = content,
+
+            )
+    }
+
+
 }
