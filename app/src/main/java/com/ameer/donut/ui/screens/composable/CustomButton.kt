@@ -28,7 +28,7 @@ fun CustomButton(
         onClick = onClick,
         modifier = modifier
             .fillMaxWidth()
-            .height(MaterialTheme.spacing.heightPrimaryButton),
+            .height(MaterialTheme.spacing.sizeHeightPrimaryButton),
         colors = ButtonDefaults.buttonColors(
             containerColor = background,
             contentColor = colorLabel

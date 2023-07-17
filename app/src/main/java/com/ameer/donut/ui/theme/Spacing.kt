@@ -19,6 +19,7 @@ data class Spacing(
     val space38: Dp = 38.dp,
     val space40: Dp = 40.dp,
     val space60: Dp = 60.dp,
-    val heightPrimaryButton: Dp = 67.dp,
+    val sizeHeightPrimaryButton: Dp = 67.dp,
+    val sizeSmallButton: Dp = 45.dp,
 )
 
