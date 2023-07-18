@@ -14,6 +14,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.NavController
 import com.ameer.donut.R
 import com.ameer.donut.ui.screens.composable.CustomButton
 import com.ameer.donut.ui.screens.composable.CustomImage
@@ -23,7 +24,7 @@ import com.ameer.donut.ui.theme.DonutTheme
 import com.ameer.donut.ui.theme.spacing
 
 @Composable
-fun WelcomeScreen() {
+fun WelcomeScreen(navController: NavController) {
     WelcomeContent()
 }
 

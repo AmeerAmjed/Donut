@@ -29,6 +29,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.constraintlayout.compose.ConstraintLayout
+import androidx.navigation.NavController
 import com.ameer.donut.R
 import com.ameer.donut.ui.screens.composable.CustomButton
 import com.ameer.donut.ui.screens.composable.CustomSmallButton
@@ -46,7 +47,7 @@ import com.google.accompanist.systemuicontroller.rememberSystemUiController
 
 
 @Composable
-fun DetailsScreen() {
+fun DetailsScreen(navController: NavController) {
     val state: DetailsViewModel = DetailsViewModel()
     val systemUiController = rememberSystemUiController()
     val view = LocalView.current
@@ -193,6 +194,10 @@ fun DetailsContent(
 @Composable
 private fun DetailsPreview() {
     DonutTheme {
-        DetailsScreen()
+        DetailsContent(
+            DetailsUiState(),
+            rememberSystemUiController(),
+            LocalView.current,
+        )
     }
 }

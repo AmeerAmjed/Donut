@@ -9,6 +9,7 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.NavController
 import com.ameer.donut.ui.screens.composable.SpacerVertical54
 import com.ameer.donut.ui.screens.home.composable.AppBar
 import com.ameer.donut.ui.screens.home.composable.Donuts
@@ -16,7 +17,10 @@ import com.ameer.donut.ui.screens.home.composable.Offers
 import com.ameer.donut.ui.theme.spacing
 
 @Composable
-fun HomeScreen(viewModel: HomeViewModel = HomeViewModel()) {
+fun HomeScreen(
+    navController: NavController,
+    viewModel: HomeViewModel = HomeViewModel()
+) {
     val state by viewModel.state.collectAsState()
     HomeContent(
         state,
