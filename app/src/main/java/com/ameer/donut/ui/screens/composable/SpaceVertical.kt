@@ -18,6 +18,11 @@ fun SpacerVertical9() {
 }
 
 @Composable
+fun SpacerVertical16() {
+    Spacer(modifier = Modifier.height(MaterialTheme.spacing.space16))
+}
+
+@Composable
 fun SpacerVertical19() {
     Spacer(modifier = Modifier.height(MaterialTheme.spacing.space19))
 }
@@ -25,6 +30,11 @@ fun SpacerVertical19() {
 @Composable
 fun SpacerVertical25() {
     Spacer(modifier = Modifier.height(MaterialTheme.spacing.space25))
+}
+
+@Composable
+fun SpacerVertical33() {
+    Spacer(modifier = Modifier.height(MaterialTheme.spacing.space33))
 }
 
 

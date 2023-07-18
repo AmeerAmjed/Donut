@@ -7,6 +7,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.ameer.donut.ui.screens.details.DetailsScreen
 import com.ameer.donut.ui.screens.home.HomeScreen
 import com.ameer.donut.ui.theme.DonutTheme
 
@@ -16,7 +17,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             DonutTheme {
-                HomeScreen()
+                DetailsScreen()
             }
         }
     }

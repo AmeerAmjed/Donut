@@ -13,3 +13,12 @@ fun SpacerHorizontal5() {
     Spacer(modifier = Modifier.width(MaterialTheme.spacing.space5))
 }
 
+@Composable
+fun SpacerHorizontal20() {
+    Spacer(modifier = Modifier.width(MaterialTheme.spacing.space20))
+}
+
+@Composable
+fun SpacerHorizontal26() {
+    Spacer(modifier = Modifier.width(MaterialTheme.spacing.space26))
+}

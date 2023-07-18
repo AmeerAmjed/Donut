@@ -57,15 +57,7 @@ fun ItemOffer(state: OfferUiState) {
                 )
             ) {
 
-                CustomSmallButton(
-                    Icons.Default.FavoriteBorder,
-                    background = MaterialTheme.colorScheme.surface,
-                    contentColor = MaterialTheme.colorScheme.primary,
-                    shape = CircleShape,
-                    modifier = Modifier.padding(
-                        MaterialTheme.spacing.space15
-                    ),
-                ) {}
+
                 Spacer(modifier = Modifier.weight(1F))
 
                 Text(
