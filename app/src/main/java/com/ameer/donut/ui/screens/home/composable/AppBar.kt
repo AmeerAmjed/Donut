@@ -19,10 +19,12 @@ import com.ameer.donut.ui.theme.DonutTheme
 
 @Composable
 fun AppBar(
+    modifier: Modifier = Modifier,
     onCLickSearch: () -> Unit,
 ) {
 
     Row(
+        modifier = modifier,
         horizontalArrangement = Arrangement.Center,
         verticalAlignment = Alignment.CenterVertically
     ) {

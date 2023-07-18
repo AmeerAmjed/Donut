@@ -9,11 +9,29 @@ import com.ameer.donut.ui.theme.spacing
 
 
 @Composable
+fun SpacerVertical5() {
+    Spacer(modifier = Modifier.height(MaterialTheme.spacing.space5))
+}
+@Composable
+fun SpacerVertical9() {
+    Spacer(modifier = Modifier.height(MaterialTheme.spacing.space9))
+}
+
+@Composable
 fun SpacerVertical19() {
     Spacer(modifier = Modifier.height(MaterialTheme.spacing.space19))
 }
 
+@Composable
+fun SpacerVertical25() {
+    Spacer(modifier = Modifier.height(MaterialTheme.spacing.space25))
+}
 
+
+@Composable
+fun SpacerVertical54() {
+    Spacer(modifier = Modifier.height(MaterialTheme.spacing.space54))
+}
 
 @Composable
 fun SpacerVertical60() {

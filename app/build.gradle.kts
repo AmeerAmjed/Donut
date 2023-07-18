@@ -2,6 +2,8 @@
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.kotlinAndroid)
+    kotlin("kapt")
+
 }
 
 android {
@@ -32,10 +34,10 @@ android {
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "17"
     }
     buildFeatures {
         compose = true
@@ -69,5 +71,14 @@ dependencies {
     debugImplementation(libs.ui.test.manifest)
     implementation("com.google.accompanist:accompanist-systemuicontroller:0.28.0")
     implementation("androidx.compose.ui:ui-text-google-fonts:1.2.0-beta02")
+
+    //viewModel
+    implementation ("androidx.activity:activity-ktx:1.6.1")
+    implementation ("androidx.lifecycle:lifecycle-extensions:2.2.0")
+    implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1")
+    implementation ("androidx.lifecycle:lifecycle-runtime-ktx:2.3.1")
+    implementation ("androidx.constraintlayout:constraintlayout-compose:1.0.1")
+
+
 
 }
