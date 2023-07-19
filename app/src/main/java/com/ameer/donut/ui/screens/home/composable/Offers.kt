@@ -20,7 +20,8 @@ import com.ameer.donut.ui.theme.spacing
 
 @Composable
 fun Offers(
-    state: List<OfferUiState>
+    state: List<OfferUiState>,
+    onCLickOffer: () -> Unit,
 ) {
     Column {
         Text(
@@ -31,7 +32,7 @@ fun Offers(
         )
         LazyRow(
             contentPadding = PaddingValues(
-                horizontal = MaterialTheme.spacing.space40,
+                horizontal = MaterialTheme.spacing.space54,
                 vertical = MaterialTheme.spacing.space23,
             ),
             horizontalArrangement = spacedBy(70.dp),
@@ -42,7 +43,8 @@ fun Offers(
             ) { index ->
 
                 ItemOffer(
-                    state = state[index]
+                    state = state[index],
+                    onCLickOffer
                 )
             }
         }
@@ -76,7 +78,7 @@ fun OffersPreview() {
                     isFavorite = false
                 ),
             )
-        )
+        ){}
     }
 
 }
