@@ -8,6 +8,9 @@ import androidx.navigation.compose.rememberNavController
 
 private const val ROUTE = "Main"
 
+fun NavController.navigateToMain() {
+    navigate(ROUTE)
+}
 
 @OptIn(ExperimentalMaterialApi::class)
 fun NavGraphBuilder.mainRoute(navController: NavController) {
