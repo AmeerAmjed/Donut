@@ -98,10 +98,9 @@ private fun WelcomeContent(
             CustomButton(
                 labelIdStringRes = R.string.get_started,
                 background = MaterialTheme.colorScheme.surface,
-                colorLabel = MaterialTheme.colorScheme.onSurface
-            ) {
-
-            }
+                colorLabel = MaterialTheme.colorScheme.onSurface,
+                onClick = onClickGetStart
+            )
         }
 
     }

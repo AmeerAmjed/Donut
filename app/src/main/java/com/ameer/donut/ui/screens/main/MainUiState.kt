@@ -18,12 +18,10 @@ data class MainUiState(
         BottomNavItem(
             route = MainRoute.Notification,
             idIconRes = R.drawable.ic_notification,
-            badge = 5,
         ),
         BottomNavItem(
             route = MainRoute.Buy,
             idIconRes = R.drawable.ic_buy,
-            badge = 5,
         ),
         BottomNavItem(
             route = MainRoute.Profile,

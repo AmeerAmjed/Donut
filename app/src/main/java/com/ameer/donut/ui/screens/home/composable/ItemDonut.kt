@@ -17,8 +17,6 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.shadow
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
@@ -39,19 +37,14 @@ fun ItemDonut(
         Card(
             Modifier
                 .align(Alignment.BottomCenter)
-                .width(138.dp)
-                .height(111.dp)
-                .shadow(
-                    elevation = 390.dp,
-                    spotColor = Color(0x1A000000),
-                    ambientColor = Color(0x1A000000)
-                ),
+                .width(140.dp)
+                .height(130.dp),
             shape = RoundedCornerShape(20.dp, 20.dp, 10.dp, 10.dp),
             colors = CardDefaults.cardColors(
                 containerColor = MaterialTheme.colorScheme.background
             ),
-
-            ) {
+            elevation = CardDefaults.cardElevation(defaultElevation = 99.dp)
+        ) {
             Column(
                 modifier = Modifier
                     .fillMaxSize()

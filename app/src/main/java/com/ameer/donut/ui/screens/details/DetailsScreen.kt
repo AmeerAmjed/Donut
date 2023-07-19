@@ -39,6 +39,7 @@ import com.ameer.donut.ui.screens.composable.SpacerVertical25
 import com.ameer.donut.ui.screens.composable.SpacerVertical33
 import com.ameer.donut.ui.screens.composable.SpacerVertical54
 import com.ameer.donut.ui.screens.details.composable.Quantity
+import com.ameer.donut.ui.screens.home.navigateToHomeScreen
 import com.ameer.donut.ui.theme.DonutTheme
 import com.ameer.donut.ui.theme.lightSecondary
 import com.ameer.donut.ui.theme.spacing
@@ -54,6 +55,7 @@ fun DetailsScreen(navController: NavController) {
     DetailsContent(
         state = state.state.collectAsState().value,
         systemUiController = systemUiController,
+        onClickBackToHome = navController::navigateToHomeScreen,
         view = view,
     )
 }
@@ -62,6 +64,7 @@ fun DetailsScreen(navController: NavController) {
 fun DetailsContent(
     state: DetailsUiState,
     systemUiController: SystemUiController,
+    onClickBackToHome: () -> Unit,
     view: View,
 ) {
 
@@ -83,12 +86,16 @@ fun DetailsContent(
                 contentColor = MaterialTheme.colorScheme.primary,
                 sizeIcon = 30,
                 modifier = Modifier
-                    .padding(MaterialTheme.spacing.space16)
+                    .padding(
+                        top = MaterialTheme.spacing.space25,
+                        start = MaterialTheme.spacing.space13,
+                    )
                     .constrainAs(back) {
                         start.linkTo(parent.start)
                         top.linkTo(parent.top)
                     },
-            ) {}
+                onClick = onClickBackToHome
+            )
 
             Image(
                 painter = painterResource(id = state.imageDrawableRes),
@@ -197,6 +204,7 @@ private fun DetailsPreview() {
         DetailsContent(
             DetailsUiState(),
             rememberSystemUiController(),
+            {},
             LocalView.current,
         )
     }

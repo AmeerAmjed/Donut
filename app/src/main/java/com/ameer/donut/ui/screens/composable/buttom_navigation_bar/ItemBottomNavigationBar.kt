@@ -27,14 +27,12 @@ fun RowScope.ItemBottomNavigationBar(
 ) {
 
     val selected = currentDestination?.hierarchy?.any { it.route == state.route } == true
-    val background = if (selected) MaterialTheme.colorScheme.primary else Color.Transparent
-    val contentColor = if (selected) Color.White else Color.Gray
+    val contentColor = if (selected) MaterialTheme.colorScheme.primary else Color.Gray
 
     Box(
         modifier = Modifier
             .size(50.dp)
             .clip(CircleShape)
-            .background(background)
             .align(Alignment.CenterVertically)
             .clickable {
 
